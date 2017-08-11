@@ -1,5 +1,4 @@
 
-
 let cards = [
 {
 	rank: 'queen',
@@ -38,10 +37,12 @@ const checkForMatch = ()=>{
 
 
 const flipCard = (event)=>{
- let element = event.currentTarget;
+ let element = event.target;
+ console.log(element);
+  console.log(element)
     let cardID = element.getAttribute('data-id');
 
-// this.setAttribute('src', cards[cardID].cardImage);
+element.setAttribute('src', cards[cardID].cardImage);
 
 
 	cardsInPlay.push(cards[cardID].rank);
@@ -51,10 +52,10 @@ const flipCard = (event)=>{
 	}
 }
 
-console.log(cardsInPlay);
+// console.log(cardsInPlay);
 
 
-const createBoard = ()=>{
+const createBoard = window.onload=()=>{
 	for (var i = 0; i < cards.length; i++) {
 
 		var cardElement = document.createElement('img');
@@ -71,7 +72,4 @@ const createBoard = ()=>{
 
 	}
 }
-
-createBoard();
-
 
