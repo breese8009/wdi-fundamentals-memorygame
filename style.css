@@ -12,6 +12,10 @@ p {
   font-family: "Droid Serif", serif;
 }
 
+p:hover{
+	background-color: yellow;
+}
+
 body {
     text-align: center;
 
@@ -48,6 +52,8 @@ footer{
 	font-size:14px;
 	letter-spacing:.08em;
 	font-weight:500;
+	
+
 }
 
 .copyright{
@@ -78,7 +84,20 @@ a{
 }
 
 a:hover {
- 
+text-decoration: underline;
 }
+
+.overlayCSS{
+	width:250px;
+	height:150px;
+	background-color: white;
+	opacity:0.55%;
+	margin:auto;
+	font-size:22px;
+}
+
+
+
+
 
 
