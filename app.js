@@ -28,9 +28,10 @@ let cardsInPlay = [];
 
 const checkForMatch = ()=>{
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-		console.log("You found a match!");
+		alert("You found a match!");
+		
 	} else {
-		console.log("Sorry, try again.");
+		alert("Sorry, try again.");
 	}
 };
 
@@ -38,8 +39,9 @@ const checkForMatch = ()=>{
 
 const flipCard = (event)=>{
  let element = event.target;
+
  console.log(element);
-  console.log(element)
+
     let cardID = element.getAttribute('data-id');
 
 element.setAttribute('src', cards[cardID].cardImage);
@@ -51,8 +53,6 @@ element.setAttribute('src', cards[cardID].cardImage);
 		checkForMatch();
 	}
 }
-
-// console.log(cardsInPlay);
 
 
 const createBoard = window.onload=()=>{
@@ -72,4 +72,8 @@ const createBoard = window.onload=()=>{
 
 	}
 }
+
+
+
+
 
