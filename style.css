@@ -1,0 +1,84 @@
+
+/* This is a multi-line
+comment. Add your CSS code
+from Unit 1 - 5 below  */
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin:0;
+}
+
+p {
+  font-family: "Droid Serif", serif;
+}
+
+body {
+    text-align: center;
+
+}
+
+header{
+	background-color: #F15B31;
+	padding: 30px 20px 30px 20px;
+}
+
+nav>a{
+color:white;
+padding-right:30px;
+ text-decoration: none;
+}
+
+nav{
+	background-color:#00A6B3;
+	padding-top:20px;
+padding-bottom:20px;
+}
+
+main{
+	width: 850px;
+	margin:35px auto 35px auto;
+}
+
+footer{
+	background: #0D2C40;
+	text-transform:uppercase;
+	padding-right:20px;
+	padding-left:20px;
+	color:white;
+	font-size:14px;
+	letter-spacing:.08em;
+	font-weight:500;
+}
+
+.copyright{
+	float:left;
+
+}
+
+.message{
+	float:right;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+.name{
+	color:#F15B31;
+	font-weight:700;
+}
+
+a{
+	border-bottom: 2px solid transparent;
+}
+
+a:hover {
+ 
+}
+
+
