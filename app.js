@@ -28,34 +28,57 @@ let cardsInPlay = [];
 
 const checkForMatch = ()=>{
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-		alert("You found a match!");
-		
+		let element=document.getElementById('overlay');
+		element.innerHTML="Congratulations!<br>You have a great memory!<br>Would you like to play again?<br>";
+		element.classList.add('overlayCSS');
+		let button = document.createElement("button");
+		button.innerHTML="play again";
+		button.setAttribute("id","btn");
+		element.appendChild(button);
+		btn.addEventListener('click',btnClick);
+		console.log(button);
 	} else {
-		alert("Sorry, try again.");
+		let element=document.getElementById('overlay');
+		element.innerHTML="Sorry!<br>Your memory sucks!<br>Would you like to play again?<br>";
+		element.classList.add('overlayCSS');
+		let button = document.createElement("button");
+		button.innerHTML="play again";
+		button.setAttribute("id","btn");
+		element.appendChild(button);
+		btn.addEventListener('click',btnClick);
+		console.log(button);
 	}
 };
 
 
 
-const flipCard = (event)=>{
- let element = event.target;
 
- console.log(element);
+const btnClick = ()=>{
+window.location.reload(true);
+}
+
+
+
+
+const flipCard = (event)=>{
+
+ let element = event.target;
 
     let cardID = element.getAttribute('data-id');
 
-element.setAttribute('src', cards[cardID].cardImage);
-
-
 	cardsInPlay.push(cards[cardID].rank);
 
+element.setAttribute('src', cards[cardID].cardImage);
 	if (cardsInPlay.length === 2) {
-		checkForMatch();
+		setTimeout(checkForMatch, 700);
 	}
+
+
 }
 
 
 const createBoard = window.onload=()=>{
+
 	for (var i = 0; i < cards.length; i++) {
 
 		var cardElement = document.createElement('img');
@@ -65,8 +88,6 @@ const createBoard = window.onload=()=>{
 		cardElement.setAttribute('data-id', i);
 
 		document.addEventListener('click', flipCard);
-
-		console.log(cardElement);
 
 		document.getElementById('game-board').appendChild(cardElement);
 
